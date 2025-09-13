@@ -1048,7 +1048,7 @@ CreateThread(function()
         if size > 0 then
             for i = 0, size - 1 do
                 local eventAtIndex = GetEventAtIndex(0, i)
-                if eventAtIndex == `EVENT_PLAYER_PROMPT_TRIGGERED` then
+                if eventAtIndex == GetHashKey('EVENT_PLAYER_PROMPT_TRIGGERED') then
                     local eventDataSize = 10
                     local eventDataStruct = DataView.ArrayBuffer(8*eventDataSize) -- buffer must be 8*eventDataSize or bigger
                     for a = 0, eventDataSize -1 do
@@ -1310,7 +1310,7 @@ AddEventHandler('rsg-horses:client:playerbrushhorse', function(itemName)
         return
     end
 
-    Citizen.InvokeNative(0xCD181A959CFDD7F4, cache.ped, horsePed, `INTERACTION_BRUSH`, 0, 0)
+    Citizen.InvokeNative(0xCD181A959CFDD7F4, cache.ped, horsePed, GetHashKey('INTERACTION_BRUSH'), 0, 0)
 
     Wait(8000)
 
@@ -1369,7 +1369,7 @@ AddEventHandler("rsg-horses:client:revivehorse", function(item, data)
         ClearPedSecondaryTask(cache.ped)
         ClearPedTasksImmediately(cache.ped)
         FreezeEntityPosition(cache.ped, false)
-        SetCurrentPedWeapon(cache.ped, `WEAPON_UNARMED`, true)
+        SetCurrentPedWeapon(cache.ped, GetHashKey('WEAPON_UNARMED'), true)
         TaskPlayAnim(cache.ped, healAnim1Dict1, healAnim1, 1.0, 1.0, -1, 0, false, false, false)
         Wait(3000)
         ClearPedTasks(cache.ped)

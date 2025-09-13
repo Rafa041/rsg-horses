@@ -134,9 +134,9 @@ Config.BoostAction = {
 }
 
 Config.ObjectActionList = {
-    [1] = {`p_watertrough02x`, 'drink'},
-    [2] = {`p_watertrough01x`, 'drink'},
-    [3] = {`p_haypile01x`, 'feed'},
+    [1] = {'p_watertrough02x', 'drink'},
+    [2] = {'p_watertrough01x', 'drink'},
+    [3] = {'p_haypile01x', 'feed'},
 }
 
 Config.Anim = {
@@ -173,7 +173,7 @@ Config.StableSettings = {
     {   -- colter
         stableid = 'colter',
         coords = vector3(-1334.2, 2397.41, 307.21),
-        npcmodel = `u_m_m_bwmstablehand_01`,
+        npcmodel = 'u_m_m_bwmstablehand_01',
         npccoords = vector4(-1334.2, 2397.41, 307.21, 67.43),
         horsecustom = vec4(-1344.8345, 2392.2900, 306.7908, 153.3136),
         showblip = true
@@ -182,7 +182,7 @@ Config.StableSettings = {
     {   -- vanhorn
         stableid = 'vanhorn',
         coords = vector3(2968.86, 792.97, 51.4),
-        npcmodel = `u_m_m_bwmstablehand_01`,
+        npcmodel = 'u_m_m_bwmstablehand_01',
         npccoords = vector4(2968.86, 792.97, 51.4, 357.89),
         horsecustom = vec4(2970.4155, 785.6143, 51.3995, 137.7870),
         showblip = true
@@ -191,7 +191,7 @@ Config.StableSettings = {
     {   -- saintdenis
         stableid = 'saintdenis',
         coords = vector3(2512.28, -1457.33, 46.31),
-        npcmodel = `u_m_m_bwmstablehand_01`,
+        npcmodel = 'u_m_m_bwmstablehand_01',
         npccoords = vector4(2512.28, -1457.33, 46.31, 86.43),
         horsecustom = vec4(2502.7288, -1439.7654, 46.3141, 176.4436),
         showblip = true
@@ -200,7 +200,7 @@ Config.StableSettings = {
     {   -- rhodes
         stableid = 'rhodes',
         coords = vector3(1211.55, -190.84, 101.39),
-        npcmodel = `u_m_m_bwmstablehand_01`,
+        npcmodel = 'u_m_m_bwmstablehand_01',
         npccoords = vector4(1211.55, -190.84, 101.39, 100.22),
         horsecustom = vec4(1215.1134, -207.5254, 101.0958, 267.8741),
         showblip = true
@@ -209,7 +209,7 @@ Config.StableSettings = {
     {   -- valentine
         stableid = 'valentine',
         coords = vector3(-365.2, 791.94, 116.18),
-        npcmodel = `u_m_m_bwmstablehand_01`,
+        npcmodel = 'u_m_m_bwmstablehand_01',
         npccoords = vector4(-365.2, 791.94, 116.18, 180.9),
         horsecustom = vec4(-388.5212, 784.0562, 115.8154, 150.4135),
         showblip = true
@@ -218,7 +218,7 @@ Config.StableSettings = {
     {   -- strawberry
         stableid = 'strawberry',
         coords = vector3(-1817.1, -568.64, 155.98),
-        npcmodel = `u_m_m_bwmstablehand_01`,
+        npcmodel = 'u_m_m_bwmstablehand_01',
         npccoords = vector4(-1817.1, -568.64, 155.98, 254.85),
         horsecustom = vec4(-1827.2969, -577.0493, 155.9565, 215.5404),
         showblip = true
@@ -227,7 +227,7 @@ Config.StableSettings = {
     {   -- blackwater
         stableid = 'blackwater',
         coords = vector3(-876.85, -1365.55, 43.53),
-        npcmodel = `u_m_m_bwmstablehand_01`,
+        npcmodel = 'u_m_m_bwmstablehand_01',
         npccoords = vector4(-876.85, -1365.55, 43.53, 275.38),
         horsecustom = vec4(-865.1928, -1366.3270, 43.5440, 86.8795),
         showblip = true
@@ -236,7 +236,7 @@ Config.StableSettings = {
     {   -- tumbleweed
         stableid = 'tumbleweed',
         coords = vector3(-5514.81, -3040.25, -2.39),
-        npcmodel = `u_m_m_bwmstablehand_01`,
+        npcmodel = 'u_m_m_bwmstablehand_01',
         npccoords = vector4(-5514.81, -3040.25, -2.39, 175.22),
         horsecustom = vec4(-5526.3452, -3030.7842, -2.0329, 105.3392),
         showblip = true
