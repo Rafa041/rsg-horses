@@ -1,22 +1,26 @@
-Config = {}
 lib.locale()
 
-Config = {
-    horsesShopItems ={
-        { name = 'horse_brush',   amount = 50, price = 5 },
-        { name = 'horse_lantern', amount = 50, price = 10 },
-        { name = 'sugarcube',     amount = 50, price = 1 },
+Config                     = {
+    horsesShopItems = {
+        { name = 'horse_brush',     price = 5 },
+        { name = 'horse_lantern',   price = 10 },
+        { name = 'sugarcube',       price = 1 },
+        { name = 'horse_holster',   price = 6 },
+        { name = 'horse_stimulant', price = 8 },
+        { name = 'horse_reviver',   price = 12 },
+        { name = 'carrot',          price = 1 },
+        { name = 'apple',           price = 1 },
     },
     PersistStock = false, --should stock save in database and load it after restart, to 'remember' stock value before restart
 }
 
 -- debug
-Config.Debug = false
+Config.Debug               = false
 
 -- horse inventory hotkey, please refer to '[framework]/rsg-core/shared/keybinds.lua' for complete list of hotkeys
-Config.HorseInvKey = 0x760A9C6F -- G
+Config.HorseInvKey         = 0x760A9C6F -- G
 
-Config.Prompt = {
+Config.Prompt              = {
     HorseDrink = 0xD8CF0C95,
     HorseGraze = 0xD8CF0C95,
     HorseLay = 0xD8CF0C95,
@@ -26,12 +30,12 @@ Config.Prompt = {
     Rotate = { 0x7065027D, 0xB4E465B4 },
 }
 
-Config.TrickXp = {
+Config.TrickXp             = {
     Lay = 1000,
     Play = 2000
 }
 
-Config.ComponentHash = {
+Config.ComponentHash       = {
     Blankets = 0x17CEB41A,
     Saddles = 0xBAA7E618,
     Horns = 0x05447332,
@@ -44,7 +48,7 @@ Config.ComponentHash = {
     Mustaches = 0x30DEFDDF,
 }
 
-Config.PriceComponent = {
+Config.PriceComponent      = {
     Blankets = 5,
     Saddles = 2,
     Horns = 10,
@@ -60,15 +64,15 @@ Config.PriceComponent = {
 ---------------------------------
 -- general settings
 ---------------------------------
-Config.EnableTarget        = true -- toggle between target and prompt
+Config.EnableTarget        = true  -- toggle between target and prompt
 Config.TargetHelp          = false -- target help to use [L-ALT]
 Config.Automount           = false -- horse automount
 Config.SpawnOnRoadOnly     = false -- always spawn on road
-Config.HorseInvWeight      = 15000 -- horse inventory weight
-Config.HorseInvSlots       = 20 -- horse inventory slots
-Config.CheckCycle          = 60 -- horse check system (mins)
-Config.StarterHorseDieAge  = 7 -- starter horse age in days till it dies (days)
-Config.HorseDieAge         = 90 -- horse age in days till it dies (days)
+Config.HorseInvWeight      = 10000 -- horse inventory weight
+Config.HorseInvSlots       = 40    -- horse inventory slots
+Config.CheckCycle          = 60    -- horse check system (mins)
+Config.StarterHorseDieAge  = 7     -- starter horse age in days till it dies (days)
+Config.HorseDieAge         = 90    -- horse age in days till it dies (days)
 Config.StoreFleedHorse     = false -- store horse if flee is used
 Config.EnableServerNotify  = false
 Config.KeyBind             = 'J'
@@ -77,100 +81,100 @@ Config.AllowTwoPlayersRide = false -- if true two players can ride but may have 
 ---------------------------------
 -- horse inventory weight by level
 ---------------------------------
-Config.Level1InvWeight = 2000
-Config.Level1InvSlots = 2
-Config.Level2InvWeight = 4000
-Config.Level2InvSlots = 4
-Config.Level3InvWeight = 6000
-Config.Level3InvSlots = 6
-Config.Level4InvWeight = 8000
-Config.Level4InvSlots = 8
-Config.Level5InvWeight = 9000
-Config.Level5InvSlots = 10
-Config.Level6InvWeight = 10000
-Config.Level6InvSlots = 12
-Config.Level7InvWeight = 12000
-Config.Level7InvSlots = 14
-Config.Level8InvWeight = 13000
-Config.Level8InvSlots = 16
-Config.Level9InvWeight = 14000
-Config.Level9InvSlots = 18
-Config.Level10InvWeight = 15000
-Config.Level10InvSlots = 20
+Config.Level1InvWeight     = 4000
+Config.Level1InvSlots      = 4
+Config.Level2InvWeight     = 8000
+Config.Level2InvSlots      = 8
+Config.Level3InvWeight     = 12000
+Config.Level3InvSlots      = 12
+Config.Level4InvWeight     = 16000
+Config.Level4InvSlots      = 16
+Config.Level5InvWeight     = 18000
+Config.Level5InvSlots      = 20
+Config.Level6InvWeight     = 20000
+Config.Level6InvSlots      = 24
+Config.Level7InvWeight     = 24000
+Config.Level7InvSlots      = 28
+Config.Level8InvWeight     = 26000
+Config.Level8InvSlots      = 32
+Config.Level9InvWeight     = 28000
+Config.Level9InvSlots      = 36
+Config.Level10InvWeight    = 10000
+Config.Level10InvSlots     = 40
 
 ---------------------------------
 -- horse health/stamina/ability/speed/acceleration levels
 ---------------------------------
-Config.Level1 = 100
-Config.Level2 = 200
-Config.Level3 = 300
-Config.Level4 = 400
-Config.Level5 = 500
-Config.Level6 = 900
-Config.Level7 = 1000
-Config.Level8 = 1500
-Config.Level9 = 1750
-Config.Level10 = 2000
+Config.Level1              = 100
+Config.Level2              = 200
+Config.Level3              = 300
+Config.Level4              = 400
+Config.Level5              = 500
+Config.Level6              = 900
+Config.Level7              = 1000
+Config.Level8              = 1500
+Config.Level9              = 1750
+Config.Level10             = 2000
 
 ---------------------------------
 -- player feed horse settings
 ---------------------------------
-Config.HorseFeed = {
+Config.HorseFeed           = {
     -- medicineHash is optional. If u do not set, the default value wil be: consumable_horse_stimulant
-    ['carrot']          = { health = 10,  stamina = 10,  ismedicine = false },
-    ['apple']           = { health = 15,  stamina = 15,  ismedicine = false },
-    ['sugarcube']       = { health = 25,  stamina = 25,  ismedicine = false },
+    ['carrot']          = { health = 10, stamina = 10, ismedicine = false },
+    ['apple']           = { health = 15, stamina = 15, ismedicine = false },
+    ['sugarcube']       = { health = 25, stamina = 25, ismedicine = false },
     ['horse_stimulant'] = { health = 100, stamina = 100, ismedicine = true, medicineHash = 'consumable_horse_stimulant' },
 }
 
 ---------------------------------
 --horse action
 ---------------------------------
-Config.ObjectAction = true
+Config.ObjectAction        = true
 
-Config.BoostAction = {
+Config.BoostAction         = {
     Health = math.random(3, 9),
     Stamina = math.random(3, 9)
 }
 
-Config.ObjectActionList = {
-    [1] = {'p_watertrough02x', 'drink'},
-    [2] = {'p_watertrough01x', 'drink'},
-    [3] = {'p_haypile01x', 'feed'},
+Config.ObjectActionList    = {
+    [1] = { 'p_watertrough02x', 'drink' },
+    [2] = { 'p_watertrough01x', 'drink' },
+    [3] = { 'p_haypile01x', 'feed' },
 }
 
-Config.Anim = {
-    Drink  = { dict = 'amb_creature_mammal@world_horse_drink_ground@base', anim = 'base',   duration = 20 }, --duration in seconds
+Config.Anim                = {
+    Drink  = { dict = 'amb_creature_mammal@world_horse_drink_ground@base', anim = 'base', duration = 20 }, --duration in seconds
     Drink2 = { dict = 'amb_creature_mammal@prop_horse_drink_trough@idle0', anim = 'idle_a', duration = 20 },
-    Graze  = { dict = 'amb_creature_mammal@world_horse_grazing@idle',      anim = 'idle_a', duration = 20 }
+    Graze  = { dict = 'amb_creature_mammal@world_horse_grazing@idle', anim = 'idle_a', duration = 20 }
 }
 
 ---------------------------------
 -- horse bonding settings
 ---------------------------------
-Config.MaxBondingLevel = 5000
+Config.MaxBondingLevel     = 5000
 
 ---------------------------------
 -- config blips
 ---------------------------------
-Config.Blip = {
+Config.Blip                = {
     blipName = locale('cf_menu_horse_blip_name'), -- Config.Blip.blipName
-    blipSprite = 'blip_shop_horse', -- Config.Blip.blipSprite
-    blipScale = 0.1 -- Config.Blip.blipScale
+    blipSprite = 'blip_shop_horse',               -- Config.Blip.blipSprite
+    blipScale = 0.1                               -- Config.Blip.blipScale
 }
 
 ---------------------------------
 -- stable npc settings
 ---------------------------------
-Config.DistanceSpawn = 20.0
-Config.FadeIn = true
+Config.DistanceSpawn       = 20.0
+Config.FadeIn              = true
 
 ---------------------------------
 -- stable npcs
 ---------------------------------
-Config.StableSettings = {
+Config.StableSettings      = {
 
-    {   -- colter
+    { -- colter
         stableid = 'colter',
         coords = vector3(-1334.2, 2397.41, 307.21),
         npcmodel = 'u_m_m_bwmstablehand_01',
@@ -179,7 +183,7 @@ Config.StableSettings = {
         showblip = true
     },
 
-    {   -- vanhorn
+    { -- vanhorn
         stableid = 'vanhorn',
         coords = vector3(2968.86, 792.97, 51.4),
         npcmodel = 'u_m_m_bwmstablehand_01',
@@ -188,7 +192,7 @@ Config.StableSettings = {
         showblip = true
     },
 
-    {   -- saintdenis
+    { -- saintdenis
         stableid = 'saintdenis',
         coords = vector3(2512.28, -1457.33, 46.31),
         npcmodel = 'u_m_m_bwmstablehand_01',
@@ -197,7 +201,7 @@ Config.StableSettings = {
         showblip = true
     },
 
-    {   -- rhodes
+    { -- rhodes
         stableid = 'rhodes',
         coords = vector3(1211.55, -190.84, 101.39),
         npcmodel = 'u_m_m_bwmstablehand_01',
@@ -206,7 +210,7 @@ Config.StableSettings = {
         showblip = true
     },
 
-    {   -- valentine
+    { -- valentine
         stableid = 'valentine',
         coords = vector3(-365.2, 791.94, 116.18),
         npcmodel = 'u_m_m_bwmstablehand_01',
@@ -215,7 +219,7 @@ Config.StableSettings = {
         showblip = true
     },
 
-    {   -- strawberry
+    { -- strawberry
         stableid = 'strawberry',
         coords = vector3(-1817.1, -568.64, 155.98),
         npcmodel = 'u_m_m_bwmstablehand_01',
@@ -224,7 +228,7 @@ Config.StableSettings = {
         showblip = true
     },
 
-    {   -- blackwater
+    { -- blackwater
         stableid = 'blackwater',
         coords = vector3(-876.85, -1365.55, 43.53),
         npcmodel = 'u_m_m_bwmstablehand_01',
@@ -233,7 +237,7 @@ Config.StableSettings = {
         showblip = true
     },
 
-    {   -- tumbleweed
+    { -- tumbleweed
         stableid = 'tumbleweed',
         coords = vector3(-5514.81, -3040.25, -2.39),
         npcmodel = 'u_m_m_bwmstablehand_01',
@@ -243,3 +247,5 @@ Config.StableSettings = {
     },
 
 }
+
+return Config
